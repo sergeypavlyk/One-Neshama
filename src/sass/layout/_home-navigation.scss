@@ -1,0 +1,39 @@
+.Home-navigation {
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $base_navbar_background;
+
+  &__dark-background {
+    height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+    background-color: $dark_navbar_background;
+  }
+
+  &__menu { 
+    display: flex;
+    justify-content: flex-end;
+    max-width: 500px;
+    width: max-content;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  &__item {
+    list-style: none;
+    margin-right: 20px;
+    font-weight: $bolder_font;
+    font-family: $base_font;
+  }
+
+  &__item-link {
+    text-decoration: none;
+    color: $dark_text_color;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: $base_text_color;
+    }
+  }
+}
