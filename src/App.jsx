@@ -1,8 +1,10 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './sass/main.scss';
 import Header from './components/Header.jsx';
-import HomeNavbar from './components/HomeNavbar';
 import Footer from './components/Footer.jsx';
+import GeneralHomeScreen from './components/GeneralHomeScreen.jsx';
+import PersonalHomeScreen from './components/PersonalHomeScreen.jsx';
 
 const App = () => {
   return (
@@ -12,9 +14,12 @@ const App = () => {
       </header>
 
       <main className="App__main">
-        <section className="App__main-intro-screen">
-          <HomeNavbar></HomeNavbar>
-        </section>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path='/' component={GeneralHomeScreen}/>
+            <Route path='/personal-home' component={PersonalHomeScreen}/>
+          </Switch>
+        </BrowserRouter>
       </main>
 
       <footer className="App__footer">
